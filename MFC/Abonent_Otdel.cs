@@ -15,6 +15,10 @@ namespace MFC
         public Abonent_Otdel()
         {
             InitializeComponent();
+            if (Program.BACKTOADMIN == true)
+            {
+                button5.Visible = true;
+            }
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -75,7 +79,7 @@ namespace MFC
         {
             MainForm MF = new MainForm();
             MF.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void претензииToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,6 +88,19 @@ namespace MFC
             panel1.Visible = false;
             panel9.Visible = false;
             panel2.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Export Ex = new Export();
+                Ex.Excel_Generation(textBox18.Text, maskedTextBox2.Text, maskedTextBox10.Text, maskedTextBox1.Text, textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text, Convert.ToDecimal(maskedTextBox3.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

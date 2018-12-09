@@ -15,6 +15,10 @@ namespace MFC
         public ZAGS()
         {
             InitializeComponent();
+            if (Program.BACKTOADMIN == true)
+            {
+                button5.Visible = true;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,7 +57,7 @@ namespace MFC
         {
             MainForm MF = new MainForm();
             MF.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

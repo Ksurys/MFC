@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.услугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заявкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +38,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
@@ -50,23 +64,9 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -97,6 +97,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1600, 66);
             this.panel1.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(1261, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 35);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Назад";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // menuStrip1
             // 
@@ -144,6 +157,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(95, 31);
             this.dataGridView2.Name = "dataGridView2";
@@ -184,16 +198,151 @@
             this.panel3.Size = new System.Drawing.Size(1246, 750);
             this.panel3.TabIndex = 33;
             // 
-            // button3
+            // label6
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(403, 641);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(497, 84);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Ответить";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(39, 314);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(294, 31);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "Данные свидетельства";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.radioButton5);
+            this.panel8.Controls.Add(this.radioButton6);
+            this.panel8.Location = new System.Drawing.Point(497, 145);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(262, 37);
+            this.panel8.TabIndex = 57;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton5.Location = new System.Drawing.Point(150, 5);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(109, 26);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Женский";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton6.Location = new System.Drawing.Point(4, 5);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(110, 26);
+            this.radioButton6.TabIndex = 0;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Мужской";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox4.Location = new System.Drawing.Point(299, 451);
+            this.maskedTextBox4.Mask = "00:00:000000:000";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(211, 30);
+            this.maskedTextBox4.TabIndex = 56;
+            this.maskedTextBox4.ValidatingType = typeof(int);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(72, 454);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(216, 27);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Кадастровый номер";
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(392, 405);
+            this.maskedTextBox3.Mask = "000000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(99, 30);
+            this.maskedTextBox3.TabIndex = 54;
+            this.maskedTextBox3.ValidatingType = typeof(int);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(305, 408);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 27);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Номер";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(159, 405);
+            this.maskedTextBox2.Mask = "0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(99, 30);
+            this.maskedTextBox2.TabIndex = 52;
+            this.maskedTextBox2.ValidatingType = typeof(int);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(72, 408);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 27);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Серия";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Государственная",
+            "Муниципальная",
+            "Частная"});
+            this.comboBox1.Location = new System.Drawing.Point(292, 497);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(228, 33);
+            this.comboBox1.TabIndex = 49;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(71, 503);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 27);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Вид собственности";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(233, 547);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(135, 30);
+            this.maskedTextBox1.TabIndex = 47;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(73, 547);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 27);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Дата выдачи";
             // 
             // label30
             // 
@@ -311,151 +460,17 @@
             this.label38.TabIndex = 34;
             this.label38.Text = "Персональные данные";
             // 
-            // maskedTextBox1
+            // button3
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(233, 547);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(135, 30);
-            this.maskedTextBox1.TabIndex = 47;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(73, 547);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 27);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Дата выдачи";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(71, 503);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 27);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Вид собственности";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Государственная",
-            "Муниципальная",
-            "Частная"});
-            this.comboBox1.Location = new System.Drawing.Point(292, 497);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 33);
-            this.comboBox1.TabIndex = 49;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(72, 408);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 27);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Серия";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(159, 405);
-            this.maskedTextBox2.Mask = "0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(99, 30);
-            this.maskedTextBox2.TabIndex = 52;
-            this.maskedTextBox2.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(392, 405);
-            this.maskedTextBox3.Mask = "000000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(99, 30);
-            this.maskedTextBox3.TabIndex = 54;
-            this.maskedTextBox3.ValidatingType = typeof(int);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(305, 408);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 27);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Номер";
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(299, 451);
-            this.maskedTextBox4.Mask = "00:00:000000:000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(211, 30);
-            this.maskedTextBox4.TabIndex = 56;
-            this.maskedTextBox4.ValidatingType = typeof(int);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(72, 454);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 27);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Кадастровый номер";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.radioButton5);
-            this.panel8.Controls.Add(this.radioButton6);
-            this.panel8.Location = new System.Drawing.Point(497, 145);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(262, 37);
-            this.panel8.TabIndex = 57;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton5.Location = new System.Drawing.Point(150, 5);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(109, 26);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Женский";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton6.Location = new System.Drawing.Point(4, 5);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(110, 26);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Мужской";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(39, 314);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(294, 31);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Данные свидетельства";
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(403, 641);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(497, 84);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Ответить";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
@@ -477,18 +492,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Свидетельство\r\nна собственность";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(1261, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 35);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Назад";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Universal
             // 

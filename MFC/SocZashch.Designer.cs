@@ -38,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,6 +87,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
@@ -179,6 +180,15 @@
             this.panel7.Size = new System.Drawing.Size(1204, 793);
             this.panel7.TabIndex = 10;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(802, 574);
+            this.maskedTextBox1.Mask = "000-000-000 00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(187, 30);
+            this.maskedTextBox1.TabIndex = 34;
             // 
             // label30
             // 
@@ -370,15 +380,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "СНИЛС";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(802, 574);
-            this.maskedTextBox1.Mask = "000-000-000 00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(187, 30);
-            this.maskedTextBox1.TabIndex = 34;
             // 
             // SocZashch
             // 

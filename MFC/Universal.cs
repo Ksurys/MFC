@@ -15,6 +15,10 @@ namespace MFC
         public Universal()
         {
             InitializeComponent();
+            if (Program.BACKTOADMIN == true)
+            {
+                button4.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,7 +57,18 @@ namespace MFC
         {
             MainForm MF = new MainForm();
             MF.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+      
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Export Ex = new Export();
+            //Ex.Excel_Generation(dataGridView2);
         }
     }
 }

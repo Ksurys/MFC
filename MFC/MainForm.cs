@@ -15,6 +15,10 @@ namespace MFC
         public MainForm()
         {
             InitializeComponent();
+            if (Program.ADMINACCESS == true)
+            {
+                button8.Visible = true;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

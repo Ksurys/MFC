@@ -15,6 +15,10 @@ namespace MFC
         public OFMS()
         {
             InitializeComponent();
+            if (Program.BACKTOADMIN == true)
+            {
+                button3.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +30,7 @@ namespace MFC
         {
             MainForm MF = new MainForm();
             MF.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void OFMS_Load(object sender, EventArgs e)

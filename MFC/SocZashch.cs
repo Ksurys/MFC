@@ -15,6 +15,10 @@ namespace MFC
         public SocZashch()
         {
             InitializeComponent();
+            if (Program.BACKTOADMIN == true)
+            {
+                button2.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +30,7 @@ namespace MFC
         {
             MainForm MF = new MainForm();
             MF.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -57,7 +61,7 @@ namespace MFC
         {
             panel7.Visible = true;
             panel2.Visible = false;
-            panel3.Visible = false;
+
         }
 
         private void SocZashch_Load(object sender, EventArgs e)

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MFC
 {
-    public partial class Form2 : Form
+    public partial class Zastavka : Form
     {
-        public Form2()
+        public Zastavka()
         {
             InitializeComponent();
 

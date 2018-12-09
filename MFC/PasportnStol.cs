@@ -15,6 +15,10 @@ namespace MFC
         public PasportnStol()
         {
             InitializeComponent();
+            if (Program.BACKTOADMIN == true)
+            {
+                button5.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,7 +104,7 @@ namespace MFC
         {
             MainForm MF = new MainForm();
             MF.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel3_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)

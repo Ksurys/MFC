@@ -1,6 +1,6 @@
 ﻿namespace MFC
 {
-    partial class Form2
+    partial class Zastavka
     {
         /// <summary>
         /// Required designer variable.
