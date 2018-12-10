@@ -33,9 +33,7 @@ namespace MFC
 
         private void услугиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel3.Visible = true;
             panel1.Visible = false;
-            panel9.Visible = false;
             panel2.Visible = false;
             //UslugiAbon UA = new UslugiAbon();
             //UA.Show();
@@ -61,18 +59,14 @@ namespace MFC
 
         private void Abonent_Otdel_Load(object sender, EventArgs e)
         {
-            panel3.Visible = false;
             panel1.Visible = false;
-            panel9.Visible = false;
             panel2.Visible = false;
         }
 
         private void заявкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel3.Visible = false;
             panel1.Visible = false;
             panel2.Visible = false;
-            panel9.Visible = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -84,9 +78,7 @@ namespace MFC
 
         private void претензииToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel3.Visible = false;
             panel1.Visible = false;
-            panel9.Visible = false;
             panel2.Visible = true;
         }
 
@@ -101,6 +93,11 @@ namespace MFC
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void еПДToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
         }
     }
 }
