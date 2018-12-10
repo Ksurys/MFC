@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.услугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.паспортГражданинаРФToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заявкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,7 +63,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.паспортГражданинаРФToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,8 +78,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.услугиToolStripMenuItem,
-            this.заявкиToolStripMenuItem,
-            this.статистикаToolStripMenuItem});
+            this.заявкиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 29);
@@ -96,18 +94,19 @@
             this.услугиToolStripMenuItem.Text = "Услуги";
             this.услугиToolStripMenuItem.Click += new System.EventHandler(this.услугиToolStripMenuItem_Click);
             // 
+            // паспортГражданинаРФToolStripMenuItem
+            // 
+            this.паспортГражданинаРФToolStripMenuItem.Name = "паспортГражданинаРФToolStripMenuItem";
+            this.паспортГражданинаРФToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.паспортГражданинаРФToolStripMenuItem.Text = "Паспорт гражданина РФ";
+            this.паспортГражданинаРФToolStripMenuItem.Click += new System.EventHandler(this.паспортГражданинаРФToolStripMenuItem_Click);
+            // 
             // заявкиToolStripMenuItem
             // 
             this.заявкиToolStripMenuItem.Name = "заявкиToolStripMenuItem";
             this.заявкиToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
             this.заявкиToolStripMenuItem.Text = "Заявки";
             this.заявкиToolStripMenuItem.Click += new System.EventHandler(this.заявкиToolStripMenuItem_Click);
-            // 
-            // статистикаToolStripMenuItem
-            // 
-            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
-            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
-            this.статистикаToolStripMenuItem.Text = "Статистика";
             // 
             // panel1
             // 
@@ -443,13 +442,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1075, 295);
             this.dataGridView1.TabIndex = 0;
             // 
-            // паспортГражданинаРФToolStripMenuItem
-            // 
-            this.паспортГражданинаРФToolStripMenuItem.Name = "паспортГражданинаРФToolStripMenuItem";
-            this.паспортГражданинаРФToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.паспортГражданинаРФToolStripMenuItem.Text = "Паспорт гражданина РФ";
-            this.паспортГражданинаРФToolStripMenuItem.Click += new System.EventHandler(this.паспортГражданинаРФToolStripMenuItem_Click);
-            // 
             // PasportnStol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,7 +477,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem услугиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem заявкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
