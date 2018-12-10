@@ -9,6 +9,7 @@ namespace MFC
     public partial class Autorizac : Form
     {
         private ControlBD _CBD; //Создание переменной формы "ControlBD"
+        private Reg _RI;
         public Autorizac()
         {
             InitializeComponent();
@@ -43,12 +44,13 @@ namespace MFC
         {
             try
             {
-                Reg_info.Reg.Set_Connection(); //Установка соединения с базой
-                Reg_info.Reg.Connection.Open(); //Открытие соединения
+                _RI = new Reg();
+                _RI.Set_Connection(); //Установка соединения с базой
+                _RI.Connection.Open(); //Открытие соединения
                 SqlDataAdapter auth = new SqlDataAdapter("SELECT COUNT(*) FROM DBO.sotr WHERE login = '" + textBox1.Text + 
-                     "' and password = '" + Crypt_Class.Encrypt(textBox2.Text) + "'", Reg_info.Reg.Connection); 
+                     "' and password = '" + Crypt_Class.Encrypt(textBox2.Text) + "'", _RI.Connection);
                 //Запрос на вывод количества строк, где поля логин и пароль соответствуют значениям из текстового поля 1 и 2
-                Reg_info.Reg.Connection.Close(); //Закрытие соединения
+                _RI.Connection.Close(); //Закрытие соединения
                 DataTable dt = new DataTable(); //Создание экзампляра объекта DataTable
                 auth.Fill(dt); //Заполнение таблицы данными, полученными из запроса
                 if (dt.Rows[0][0].ToString() == "1") //Если в первой ячейке таблицы содержиться 1, то 
@@ -62,7 +64,7 @@ namespace MFC
                             switch (Program.PSACCESS)//Проверка значения из переменной PSACCESS в классе Program
                             {
                                 case 1: //если 1
-                                    Reg_info.Reg.Connection.Close(); //Закрытие соединения с базой
+                                    _RI.Connection.Close(); //Закрытие соединения с базой
                                     PasportnStol passtol = new PasportnStol(); //Объявление экземпляра класса PasportnStol
                                     passtol.Show(); //Вызов формы
                                     this.Close(); //Закрытие текущей формы
@@ -71,7 +73,7 @@ namespace MFC
                             switch (Program.AOACCESS)
                             {
                                 case 1:
-                                    Reg_info.Reg.Connection.Close();
+                                    _RI.Connection.Close();
                                     Abonent_Otdel ao_otdel = new Abonent_Otdel();
                                     ao_otdel.Show();
                                     this.Close();
@@ -80,7 +82,7 @@ namespace MFC
                             switch (Program.UOACCESS)
                             {
                                 case 1:
-                                    Reg_info.Reg.Connection.Close();
+                                    _RI.Connection.Close();
                                     Universal uo_otdel = new Universal();
                                     uo_otdel.Show();
                                     this.Close();
@@ -89,7 +91,7 @@ namespace MFC
                             switch (Program.OFMSACCESS)
                             {
                                 case 1:
-                                    Reg_info.Reg.Connection.Close();
+                                    _RI.Connection.Close();
                                     OFMS ofms = new OFMS();
                                     ofms.Show();
                                     this.Close();
@@ -98,7 +100,7 @@ namespace MFC
                             switch (Program.ZAGZACCESS)
                             {
                                 case 1:
-                                    Reg_info.Reg.Connection.Close();
+                                    _RI.Connection.Close();
                                     ZAGS zags = new ZAGS();
                                     zags.Show();
                                     this.Close();
@@ -107,7 +109,7 @@ namespace MFC
                             switch (Program.SZACCESS)
                             {
                                 case 1:
-                                    Reg_info.Reg.Connection.Close();
+                                    _RI.Connection.Close();
                                     SocZashch sz_otdel = new SocZashch();
                                     sz_otdel.Show();
                                     this.Close();
@@ -115,7 +117,7 @@ namespace MFC
                             }
                             break;
                         case 1:
-                            Reg_info.Reg.Connection.Close();
+                            _RI.Connection.Close();
                             Program.ADMINACCESS = false;
                             Program.BACKTOADMIN = true;
                             MainForm MF = new MainForm();
@@ -123,7 +125,7 @@ namespace MFC
                             this.Close();
                             break;
                         case 2:
-                            Reg_info.Reg.Connection.Close();
+                            _RI.Connection.Close();
                             Program.ADMINACCESS = true;
                             Program.BACKTOADMIN = true;
                             MainForm MainForm = new MainForm();
@@ -143,7 +145,7 @@ namespace MFC
             {
                 MessageBox.Show(ex.Message);
             }
-            Reg_info.Reg.Connection.Close();
+            _RI.Connection.Close();
 
         }
         

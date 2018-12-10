@@ -110,6 +110,7 @@
     </Compile>
     <Compile Include="ControlBD.cs" />
     <Compile Include="Export.cs" />
+    <Compile Include="Reg.cs" />
     <Compile Include="Zastavka.cs">
       <SubType>Form</SubType>
     </Compile>

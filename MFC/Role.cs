@@ -8,6 +8,8 @@ namespace MFC
     {
         ControlBD _CBD = new ControlBD();
         int ao, ps, uo, sz, of, za;
+        public Crypt_Class crypt;
+        Reg _RI = new Reg();
         public Role()
         {
             InitializeComponent();
@@ -128,7 +130,8 @@ namespace MFC
                     }
                     catch
                     {
-                        Reg_info.Reg.Connection.Close();
+                        _RI = new Reg();
+                        _RI.Connection.Close();
                         MessageBox.Show("Error!", "МФЦ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
@@ -203,7 +206,7 @@ namespace MFC
             }
             catch
             {
-                Reg_info.Reg.Connection.Close();
+                _RI.Connection.Close();
                 MessageBox.Show("Получены не все данные!", "МФЦ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
@@ -218,7 +221,7 @@ namespace MFC
             }
             catch
             {
-                Reg_info.Reg.Connection.Close();
+                _RI.Connection.Close();
                 MessageBox.Show("Получены не все данные!", "МФЦ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -235,7 +238,7 @@ namespace MFC
                     }
                     catch
                     {
-                        Reg_info.Reg.Connection.Close();
+                        _RI.Connection.Close();
                         MessageBox.Show("Роль не выбрана!", "АРМ Продажа товара", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
@@ -270,7 +273,7 @@ namespace MFC
             }
             catch
             {
-                Reg_info.Reg.Connection.Close();
+                _RI.Connection.Close();
                 MessageBox.Show("Выберите строку, содержащую данные!", "МФЦ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -301,7 +304,7 @@ namespace MFC
                         }
                         catch (Exception ex)
                         {
-                            Reg_info.Reg.Connection.Close();
+                            _RI.Connection.Close();
                             MessageBox.Show(ex.Message);
                         }        
                     }
@@ -332,7 +335,7 @@ namespace MFC
                         }
                         catch (Exception ex)
                         {
-                            Reg_info.Reg.Connection.Close();
+                            _RI.Connection.Close();
                             MessageBox.Show(ex.Message);
                         }
 
