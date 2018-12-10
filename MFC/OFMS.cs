@@ -37,13 +37,11 @@ namespace MFC
         {
             panel2.Visible = false;
             panel5.Visible = false;
-            panel3.Visible = false;
         }
 
         private void услугиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
-            panel3.Visible = true;
 
         }
 
@@ -56,7 +54,11 @@ namespace MFC
         {
             panel2.Visible = false;
             panel5.Visible = true;
-            panel3.Visible = false;
+        }
+
+        private void заграничныйПаспортToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
         }
     }
 }
